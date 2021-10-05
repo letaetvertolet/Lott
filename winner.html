@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY YOUR LUCK</title>
+    <script>
+         window.addEventListener("load",()=> {
+            const namea = sessionStorage.getItem('NUMA');
+            const nameb = sessionStorage.getItem('NUMB');
+            const namec = sessionStorage.getItem('NUMC');
+            const named = sessionStorage.getItem('NUMD');
+            
+            
+        setTimeout(() => {
+            document.getElementById("result").innerHTML="Result will be announced under 5 seconds";
+            
+        }, 5000);
+
+        setTimeout(() => {
+            document.getElementById("lastthree").innerHTML="And the lottery ticket is...";
+            
+        }, 10000);
+        var n = (Math.floor(1 + (9*(Math.random()))))*10;
+        setTimeout(() => {
+            document.getElementById("luckydrawnumber").innerHTML=n;
+            
+        }, 13000);
+
+        
+        setTimeout(() => {
+            console.log(namea);
+            console.log(nameb);
+        if(n==namea)
+        {
+            document.getElementById("winornot").innerHTML="Congratulations! You won";
+        }
+       else if(n==nameb)
+        {
+            document.getElementById("winornot").innerHTML="Congratulations! You won";
+        }
+       else if(n==namec)
+        {
+            document.getElementById("winornot").innerHTML="Congratulations! You won";
+        }
+        else if(n==namea)
+        {
+            document.getElementById("winornot").innerHTML="Congratulations! You won";
+        }
+        else
+        {
+            document.getElementById("winornot").innerHTML="Better luck next time!";
+        }
+    }, 16000);
+
+})
+
+
+    </script>
+</head>
+<style>
+    *{
+        background-color: white;
+        background-size: cover;
+    }
+    .winheadline{
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        font-size:60px;
+        padding-top:40px;
+        color:black;
+    }
+    #result,#lastthree{
+        padding-top:40px;
+        font-size:50px;
+        text-align: center;
+        color:black;
+    }
+    #lastthree{
+        color:black;
+    }
+
+    #luckydrawnumber{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        font-size:100px;
+        color:red;
+        padding-top:100px;
+        background-color:white;
+        text-align:black;
+
+    }
+
+    #winornot{
+        color:black;
+        font-size: 60px;
+        text-align: center;
+
+    }
+</style>
+<body>
+    <div class = "winheadline">
+        Be ready
+    </div>
+    <div id = "result"></div>
+    <div id = "lastthree"></div>
+    <div id = "winnerpage"></div>
+    <div id = "luckydrawnumber"></div>
+    <div id = "winornot"></div>
+
+</body>
+</html>
